@@ -8,11 +8,11 @@ import plotly.express as px
 excel_file_path = './test_file.xlsx'
 sheet_name = 'Sheet1'  # Replace with the actual sheet name
 
-try:
-    df = pd.read_excel(excel_file_path, sheet_name=sheet_name)
-except Exception as e:
-    print(f"Error loading data from Excel file:")
-    df = pd.DataFrame()  # Create an empty DataFrame to avoid further errors
+# try:
+df = pd.read_excel(excel_file_path, sheet_name=sheet_name)
+# except Exception as e:
+#     print(f"Error loading data from Excel file:")
+df = pd.DataFrame()  # Create an empty DataFrame to avoid further errors
 
 # Initialize the Dash app
 app = dash.Dash(__name__)
