@@ -5,7 +5,7 @@ import pandas as pd
 import plotly.express as px
 
 # Load data from an Excel file with a specific sheet
-excel_file_path = r'../Test file.xlsx'
+excel_file_path = r'../test_file.xlsx'
 sheet_name = 'Sheet1'  # Replace with the actual sheet name
 
 try:
