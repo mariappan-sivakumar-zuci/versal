@@ -1,0 +1,9 @@
+{
+    "functions": {
+      "api/Vercel": {
+        "runtime": "vercel-python@0.5.1",
+        "includeFiles": ["requirements.txt"]
+      }
+    }
+  }
+  
