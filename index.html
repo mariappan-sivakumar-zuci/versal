@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <title>Sample HTML Page with Bar Chart</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +26,11 @@
             padding: 1em;
             text-align: center;
         }
+        canvas {
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +41,37 @@
     <main>
         <h2>About Us</h2>
         <p>This is a sample HTML page. Feel free to modify it according to your needs.</p>
+
+        <!-- Bar Chart Container -->
+        <canvas id="myBarChart"></canvas>
+
+        <!-- Python Script for Bar Chart -->
+        <script>
+            // Python-like code to generate a simple bar chart
+            function generateBarChart() {
+                const canvas = document.getElementById('myBarChart');
+                const ctx = canvas.getContext('2d');
+
+                // Your data for the bar chart
+                const data = {
+                    labels: ['Label 1', 'Label 2', 'Label 3'],
+                    datasets: [{
+                        label: 'Sample Bar Chart',
+                        backgroundColor: ['#ff6384', '#36a2eb', '#ffce56'],
+                        data: [5, 10, 15]
+                    }]
+                };
+
+                // Create the bar chart
+                const myBarChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: data,
+                });
+            }
+
+            // Call the function to generate the bar chart
+            generateBarChart();
+        </script>
     </main>
 
     <footer>
